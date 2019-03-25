@@ -1,0 +1,114 @@
+/* 6.0 Service Area */
+
+.service-content-area {
+    padding: 50px 30px;
+    position: relative;
+    z-index: 1;
+    @include transition-duration(500ms);
+    border-radius: 4px;
+    background-color: $white;
+
+    @media #{$breakpoint-lg} {
+        padding: 30px 20px;
+    }
+
+    @media #{$breakpoint-sm} {
+        padding: 30px;
+    }
+
+    .service-icon {
+        position: relative;
+        z-index: 2;
+        font-size: 52px;
+        margin-bottom: 5px;
+        display: block;
+        color: $primary;
+    }
+
+    .service-content-text {
+        h4 {
+            margin-bottom: 20px;
+            @include transition-duration(500ms);
+
+            @media #{$breakpoint-sm} {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+
+            @media #{$breakpoint-lg} {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &:hover,
+    &:focus {
+        @include transform(translateY(-15px));
+        background-color: $white;
+        @include box-shadow(0 10px 55px 5px rgba(137, 173, 255, .35));
+
+        .service-content-text {
+            h4 {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.my-service-area {
+    position: relative;
+    z-index: 1;
+
+    .row {
+        .col-12:first-child {
+            .service-content-area {
+                .service-icon {
+                    color: #00b894;
+                }
+            }
+        }
+
+        .col-12:nth-child(2) {
+            .service-content-area {
+                .service-icon {
+                    color: #0984e3;
+                }
+            }
+        }
+
+        .col-12:nth-child(3) {
+            .service-content-area {
+                .service-icon {
+                    color: #d63031;
+                }
+            }
+        }
+
+        .col-12:nth-child(4) {
+            .service-content-area {
+                .service-icon {
+                    color: #00cec9;
+                }
+            }
+        }
+
+        .col-12:nth-child(5) {
+            .service-content-area {
+                .service-icon {
+                    color: #e84393;
+                }
+            }
+        }
+
+        .col-12:last-child {
+            .service-content-area {
+                .service-icon {
+                    color: #2d3436;
+                }
+            }
+        }
+    }
+}

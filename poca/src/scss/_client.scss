@@ -1,0 +1,63 @@
+/* 12.0 Client CSS */
+
+.clients-feedback-area {
+    position: relative;
+    z-index: 1;
+
+    .star-icon {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 10px;
+
+        i {
+            font-size: 14px;
+            color: #f1b922;
+        }
+    }
+
+    .client-description > p {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: $heading;
+
+        @media #{$breakpoint-xs} {
+            font-size: 16px;
+        }
+    }
+
+    .client-name > h5 {
+        color: $primary;
+        margin-bottom: 0;
+    }
+}
+
+.single-testimonial-slide {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    cursor: move;
+
+    .client-thumbnail {
+        position: relative;
+        z-index: 1;
+
+        img {
+            width: 70px !important;
+            height: 70px !important;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+    }
+}
+
+.testimonial-slides {
+    position: relative;
+    z-index: 1;
+
+    .owl-dots {
+        @include display-flex(flex);
+        @include align-items-center;
+        @include justify-content-center;
+        
+    }
+}

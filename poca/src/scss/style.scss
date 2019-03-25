@@ -1,0 +1,72 @@
+/* ----------------------------------------------------------
+[Master Stylesheet]
+
+Template Name: Poca - Personal / Portfolio / Resume Template
+Template Author: Designing World
+Template Author URL: https://themeforest.net/user/designing-world/
+Version: 1.0.0
+----------------------------------------------------------
+
+[Index of CSS]
+
++ body
+    - 01.0 Reboot CSS
+    - 02.0 Shortcodes CSS
+    - 03.0 Preloader CSS
+    - 04.0 Header CSS
+    - 05.0 Hero CSS
+    - 06.0 Service CSS
+    - 07.0 Video CSS
+    - 08.0 Counter CSS
+    - 09.0 Skill CSS
+    - 10.0 Barfiller CSS
+    - 11.0 Portfolio CSS
+    - 12.0 Client CSS
+    - 13.0 Contact CSS
+    - 14.0 Footer CSS
+    - 15.0 Blog CSS
+    - 16.0 Demo CSS
+
++ Font Family
+
+    - 'Roboto', sans-serif;
+
+--------------------------------------------------- */
+
+/* Import Fonts & All CSS Files */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+@import url(css/bootstrap.min.css);
+@import url(css/default/classy-nav.css);
+@import url(css/default/custom-font.css);
+@import url(css/animate.css);
+@import url(css/owl.carousel.min.css);
+@import url(css/magnific-popup.css);
+@import url(css/jquery.animatedheadline.css);
+@import url(css/font-awesome.min.css);
+@import url(css/style.css);
+
+
+@import "mixins/flex";
+@import "mixins/miscellaneous";
+@import "variables";
+@import "responsive";
+
+/* Import SCSS Files */
+
+@import "reboot";
+@import "shortcodes";
+@import "preloader";
+@import "header";
+@import "hero";
+@import "service";
+@import "video";
+@import "counter";
+@import "skill";
+@import "barfiller";
+@import "portfolio";
+@import "client";
+@import "contact";
+@import "footer";
+@import "blog";
+@import "demo";

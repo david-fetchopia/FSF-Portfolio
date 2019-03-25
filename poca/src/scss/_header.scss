@@ -1,0 +1,164 @@
+/* 4.0 Header CSS */
+
+.classy-navbar {
+    @include transition-duration(400ms);
+    width: 100%;
+    height: 100px;
+    padding: 0;
+
+    @media #{$breakpoint-xs} {
+        height: 80px;
+    }
+}
+
+.classy-nav-container {
+    background-color: transparent;
+}
+
+.classynav ul {
+    li {
+        a {
+            position: relative;
+            z-index: 1;
+            color: $white;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+            padding: 0 20px;
+
+            &::before {
+                @include transition-duration(500ms);
+                background-color: #ff9800;
+                content: "";
+                position: absolute;
+                z-index: 1;
+                bottom: 8px;
+                width: 0%;
+                height: 2px;
+                left: 20px;
+            }
+
+            &:hover,
+            &:focus {
+                font-weight: 500;
+                color: $white;
+
+                &::before {
+                    width: calc(100% - 40px);
+
+                    @media #{$breakpoint-md} {
+                        width: 60px;
+                        left: 15px;
+                    }
+
+                    @media #{$breakpoint-xs} {
+                        width: 60px;
+                        left: 15px;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            a {
+                color: $white;
+
+                &::before {
+                    @include transition-duration(500ms);
+                    background-color: #ff9800;
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 8px;
+                    width: 0%;
+                    height: 2px;
+                    left: 20px;
+                    width: calc(100% - 40px);
+
+                    @media #{$breakpoint-md} {
+                        width: 60px;
+                        left: 15px;
+                    }
+
+                    @media #{$breakpoint-xs} {
+                        width: 60px;
+                        left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.classynav ul li.megamenu-item > a::after,
+.classynav ul li.has-down > a::after {
+    color: $white;
+}
+
+.breakpoint-off .classynav ul li .dropdown {
+    background-color: $dark;
+    border-radius: 3px;
+    @include box-shadow(0 10px 55px 5px rgba(137, 173, 255, .35));
+    width: 190px;
+    padding: 20px;
+
+    @media #{$breakpoint-lg} {
+        padding: 15px;
+        width: 170px;
+    }
+}
+
+.classynav ul li .dropdown li a {
+    border-bottom: none;
+    font-size: 13px;
+}
+
+.header-area {
+    position: fixed;
+    z-index: 990;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    @include transition-duration(500ms);
+    background-color: rgba(0, 0, 0, 0.1);
+
+    &.sticky {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 990;
+        background: $dark;
+        box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+
+        .classy-navbar {
+            height: 80px;
+        }
+    }
+}
+
+.classy-navbar-toggler .navbarToggler span {
+    background-color: $white;
+}
+
+.breakpoint-on .classy-navbar .classy-menu {
+    background-color: $dark;
+}
+
+.breakpoint-on .classynav > ul > li > a {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.classycloseIcon .cross-wrap span {
+    background: $white;
+}
+
+.classy-navbar .nav-brand {
+    @media #{$breakpoint-xs} {
+        max-width: 60px;
+    }
+}
