@@ -21,4 +21,16 @@ $( document ).ready(function() {
         console.log("clicked word guess");
         window.location.href = "https://github.com/david-fetchopia/constructor-word-guess";
     })
+    $("#contact_submit").click(function() {
+        event.preventDefault;
+        var address = document.getElementById("email").value;
+        var subject = document.getElementById("subject").value;
+        var body = document.getElementById("message").value;
+
+        window.open('mailto:davidm989@gmail.com');
+        // console.log(address);
+        // console.log(subject);
+        // console.log(body);
+        // console.log("CLICKED SUBMIT");
+    })
 });
